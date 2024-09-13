@@ -25,6 +25,7 @@ buttons.appendChild(btn3);
 
 
 btn.addEventListener("click", () => {
+    useRandomColor = false;
     modal.style.display = "block"; 
     userInput.focus();
 });
@@ -38,7 +39,7 @@ function createSquares() {
         for (let i = 0; i < numberAnswer; i++) {
             let square = document.createElement('div');
             square.className = 'square';
-            square.style.color = 'green';
+            square.style.color = 'blue';
             square.style.backgroundColor = 'lightgray';
             square.style.border = '1px solid black';
             square.style.width = (568 / numberAnswer) + "px";
@@ -89,7 +90,7 @@ btn3.addEventListener("click", () => {
 
                     event.target.style.backgroundColor = randomColor;
                 } else {
-                    event.target.style.backgroundColor = "lightblue";
+                    event.target.style.backgroundColor = "blue";
                 }   
                     
                     setTimeout(() => {
@@ -138,7 +139,7 @@ function color() {
     squares.forEach((square) => square.addEventListener(
         "mouseover",
         (event) => {
-            event.target.style.backgroundColor = "cornflowerblue";
+            event.target.style.backgroundColor = "blue";
             }
         )
     )
